@@ -1,0 +1,175 @@
+.catalog {
+    margin: 140px 70px;
+}
+
+.catalog h1 {
+    font-size: 4rem;
+}
+
+.catalog .categories-list {
+    margin-top: 45px;
+    margin-bottom: 50px;
+}
+
+.categories-list .category-btn {
+    border: none;
+    background-color: white;
+    font-size: 1.5rem;
+    margin-right: 60px;
+}
+
+.categories-list .reset-btn {
+    margin-left: 60px;
+}
+
+.categories-list .category-btn:hover {
+    transform: translateY(-2px);
+}
+
+.categories-list .category-btn {
+    position: relative;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.categories-list .category-btn::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.3s, left 0.3s;
+}
+
+.categories-list .category-btn.active::after {
+    width: calc(100% + 50px);
+    left: -20px;
+}
+
+.catalog .card {
+    max-width: 420px;
+    margin-right: 20px;
+    height: 650px;
+    border: 3px solid black;
+    text-align: center;
+}
+
+.catalog .card .card-title {
+    padding: 0 25px;
+    line-height: 36px;
+    font-size: 1.5rem;
+}
+
+.catalog .card img {
+    width: 100%;
+    height: 301px;
+    object-fit: contain;
+    object-position: center;
+    margin: 25px 0 29px 0;
+}
+
+.catalog .card .card-category {
+    padding: 35px 0;
+    font-size: 1.125rem;
+}
+
+.catalog .card .price {
+    font-size: 1.875rem;
+    margin-right: 18px;
+    padding: 25px 25px;
+}
+
+.catalog .card .card-btn {
+    border: 3px solid black;
+    background-color: white;
+    font-size: 1.875rem;
+    line-height: 45px;
+    padding: 0 25px;
+}
+
+.catalog .card .card-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px black;
+}
+
+.catalog .card .card-btn:active {
+    border-color: black;
+    transform: translateY(0);
+    box-shadow: 2px 2px 5px black;
+}
+
+.catalog .pagination {
+    gap: 120px;
+    margin-top: 70px;
+    margin-bottom: 140px;
+}
+
+.catalog .pagination-arrow {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #1596C1;
+    transition: opacity 0.2s ease;
+}
+
+.catalog .pagination-arrow:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.catalog .pagination-info {
+    font-size: 1.875rem;
+}
+
+@media (max-width: 768px) {
+    .catalog {
+        margin: 90px 30px;
+    }
+
+    .catalog h1 {
+        font-size: 3rem;
+    }
+
+    .categories-list .category-btn {
+        font-size: 1.125rem;
+        margin-right: 20px;
+    }
+
+    .categories-list .reset-btn {
+        margin-left: 10px;
+    }
+
+    .categories-list .category-btn.active::after {
+        width: calc(100% + 8px);
+        left: -4px;
+    }
+
+    .catalog .card .card-title {
+        padding: 0 25px;
+        line-height: 27px;
+        font-size: 1.125rem;
+    }
+
+    .catalog .card .card-category {
+        padding: 20px 0;
+        font-size: 0.875rem;
+    }
+
+    .catalog .card .price {
+        font-size: 1.375rem;
+    }
+
+    .catalog .card .card-btn {
+        font-size: 1.375rem;
+        line-height: 45px;
+        padding: 0 25px;
+    }
+
+    .catalog .card {
+        max-width: 340px;
+        height: 585px;
+    }
+}
